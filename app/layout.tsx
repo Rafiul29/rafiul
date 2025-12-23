@@ -21,7 +21,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dev Rafiul Islam | Full Stack Developer",
+    default: "Rafiul Islam | Full Stack Developer",
     template: "%s | Dev Rafiul Islam",
   },
   description:
