@@ -25,12 +25,13 @@ export const metadata: Metadata = {
     template: "%s | Dev Rafiul Islam",
   },
   description:
-    "Dev Rafiul Islam is a Full Stack Web Developer specializing in Next.js, React, Laravel, Django, PHP, REST APIs, and scalable web applications.",
+    "Rafiul Islam is a Full Stack Web Developer specializing in Next.js, React, Laravel, Django, PHP, REST APIs, and scalable web applications.",
   applicationName: "Dev Rafiul Islam Portfolio",
   keywords: [
     "Dev Rafiul Islam",
-    "Dev Rafiul Islam Full Stack Developer",
-    "Dev Rafiul Islam Web Developer",
+    "Developer Rafiul Islam",
+    "Rafiul Islam Full Stack Developer",
+    "Rafiul Islam Web Developer",
     "Next.js Developer Portfolio",
     "React Developer Portfolio",
     "Laravel Backend Developer",
