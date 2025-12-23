@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6">
           {/* Navigation */}
           <nav className="flex flex-wrap gap-4 justify-center">
-            {["Home","About","Skills","Projects","Experience","Certifications","Education","Contact"].map((section) => (
+            {["Home", "About", "Skills", "Projects", "Experience", "Certifications", "Education", "Contact"].map((section) => (
               <a
                 key={section}
                 href={`#${section.toLowerCase()}`}
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Footer Text */}
           <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
-            © 2025 Md Ashikur Rahaman. All rights reserved.
+            © 2025 Md Rafiul Islam. All rights reserved.
           </div>
         </div>
       </div>

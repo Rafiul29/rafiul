@@ -27,13 +27,13 @@ export default function HomeSection() {
               </div>
 
               <h1 className="text-3xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                Md Ashikur Rahaman
+                Md Rafiul Islam
               </h1>
 
               <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
                 I&apos;m a{" "}
                 <span className="font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  Front-End Developer
+                  Full Stack Developer
                 </span>
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function HomeSection() {
             <div className="w-48 h-48 md:w-[350px] md:h-[350px] rounded-full bg-white dark:bg-gray-950 shadow-lg border overflow-hidden z-10">
               <Image
                 src="/assets/UpdateProfile1.png"
-                alt="Md Ashikur Rahaman"
+                alt="Md Rafiul Islam"
                 width={350}
                 height={350}
                 className="object-cover rounded-full hover:scale-105 transition-transform"

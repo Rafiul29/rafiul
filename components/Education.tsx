@@ -41,7 +41,7 @@ export default function Education() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100">
-                      B.Sc. in Information and Communication Technology
+                      B.Sc. in Computer Science and Engineering
                     </h3>
                     <p className="text-blue-600 dark:text-blue-400 font-medium">
                       Islamic University, Kushtia - 7003
@@ -56,7 +56,7 @@ export default function Education() {
                           <rect width="18" height="18" x="3" y="4" rx="2" />
                           <path d="M3 10h18" />
                         </svg>
-                        <span className="text-sm">2020 - Current</span>
+                        <span className="text-sm">2019-2023</span>
                       </div>
                       <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -65,7 +65,7 @@ export default function Education() {
                           <circle cx="12" cy="8" r="6" />
                           <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
                         </svg>
-                        <span className="text-sm">CGPA: 3.53</span>
+                        <span className="text-sm">CGPA: 3.34</span>
                       </div>
                     </div>
                   </div>
@@ -92,7 +92,7 @@ export default function Education() {
                       Higher Secondary Certificate (HSC)
                     </h3>
                     <p className="text-blue-600 dark:text-blue-400 font-medium">
-                      Agrani School and College
+                      Shaheed Bulbul collage, Pabna
                     </p>
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-3">
                       <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
@@ -104,7 +104,7 @@ export default function Education() {
                           <rect width="18" height="18" x="3" y="4" rx="2" />
                           <path d="M3 10h18" />
                         </svg>
-                        <span className="text-sm">2017 - 2019</span>
+                        <span className="text-sm">2015 - 2017</span>
                       </div>
                       <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -113,7 +113,7 @@ export default function Education() {
                           <circle cx="12" cy="8" r="6" />
                           <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
                         </svg>
-                        <span className="text-sm">GPA: 4.92</span>
+                        <span className="text-sm">GPA: 4.72</span>
                       </div>
                     </div>
                   </div>

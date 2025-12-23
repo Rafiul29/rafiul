@@ -30,9 +30,9 @@ export default function AboutSection() {
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               Hello! 👋 I&apos;m{" "}
               <span className="text-blue-600 font-semibold">
-                Md. Ashik Ali
+                Md. Rafiul Islam
               </span>
-              , a B.Sc. Engineering student in ICT at Islamic University. I enjoy
+              , a B.Sc. Engineering student in CSE at Islamic University. I enjoy
               building responsive and functional websites and improving every day
               as a developer.
             </p>
