@@ -21,38 +21,38 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Md Rafiul Islam | Full Stack Developer",
-    template: "%s | Md Rafiul Islam",
+    default: "Dev Rafiul Islam | Full Stack Developer",
+    template: "%s | Dev Rafiul Islam",
   },
   description:
-    "Md Rafiul Islam is a Full Stack Web Developer specializing in Next.js, React, Laravel, Django, PHP, REST APIs, and scalable web applications.",
-  applicationName: "Md Rafiul Islam Portfolio",
+    "Dev Rafiul Islam is a Full Stack Web Developer specializing in Next.js, React, Laravel, Django, PHP, REST APIs, and scalable web applications.",
+  applicationName: "Dev Rafiul Islam Portfolio",
   keywords: [
-    "Md Rafiul Islam Full Stack Developer",
-    "Md Rafiul Islam Web Developer",
-    "Md Rafiul Islam Backend Developer",
-    "Next.js Full Stack Developer",
-    "React Next.js Developer",
-    "Django Backend Developer",
+    "Dev Rafiul Islam",
+    "Dev Rafiul Islam Full Stack Developer",
+    "Dev Rafiul Islam Web Developer",
+    "Next.js Developer Portfolio",
+    "React Developer Portfolio",
     "Laravel Backend Developer",
+    "Django Backend Developer",
     "Full Stack Developer Portfolio",
     "Backend Developer Portfolio",
   ],
-  authors: [{ name: "Md Rafiul Islam" }],
-  creator: "Md Rafiul Islam",
+  authors: [{ name: "Dev Rafiul Islam" }],
+  creator: "Dev Rafiul Islam",
   metadataBase: new URL("https://rafiul-islam-dev.vercel.app"),
   openGraph: {
-    title: "Md Rafiul Islam | Full Stack Developer",
+    title: "Dev Rafiul Islam | Full Stack Developer",
     description:
-      "Portfolio of Md Rafiul Islam – Full Stack Developer working with Next.js, React, Django, and modern web technologies.",
+      "Portfolio of Dev Rafiul Islam – Full Stack Developer working with Next.js, React, Django, Laravel, and modern web technologies.",
     url: "/",
-    siteName: "Md Rafiul Islam Portfolio",
+    siteName: "Dev Rafiul Islam Portfolio",
     images: [
       {
         url: "/profile.png",
         width: 1200,
         height: 630,
-        alt: "Md Rafiul Islam Portfolio",
+        alt: "Dev Rafiul Islam Portfolio",
       },
     ],
     locale: "en_US",
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Md Rafiul Islam | Full Stack Developer",
+    title: "Dev Rafiul Islam | Full Stack Developer",
     description:
-      "Full Stack Developer skilled in Next.js, React, Django, and modern web technologies.",
+      "Dev Rafiul Islam – Full Stack Developer skilled in Next.js, React, Django, and modern web technologies.",
     images: ["/profile.png"],
   },
   robots: {
@@ -80,8 +80,28 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Dev Rafiul Islam",
+    url: "https://rafiul-islam-dev.vercel.app",
+    jobTitle: "Full Stack Developer",
+    sameAs: [
+      "https://github.com/Rafiul29",
+      "https://www.linkedin.com/in/rafiul-islam-cse/",
+    ],
+  };
+
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
           <Navbar />
