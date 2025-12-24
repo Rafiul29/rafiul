@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
-import Footer from "@/components/shared/Footer";
 import { Providers } from "./providers";
+import { Footer } from "@/components/shared/Footer";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
+import { GithubStarsButton } from "@/components/ui/GithubStarsButton";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -108,6 +110,8 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <ScrollToTop />
+          <GithubStarsButton/>
         </Providers>
       </body>
     </html>

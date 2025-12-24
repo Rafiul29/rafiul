@@ -5,12 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --grid-color: rgba(99, 102, 241, 0.1);
+  /* Subtle indigo */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --grid-color: rgba(99, 102, 241, 0.05);
+    /* Dimmer for dark mode */
   }
 }
 
@@ -18,10 +22,142 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Reduce motion accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Fixed Grid Pattern using CSS Variables */
+  .bg-grid-pattern {
+    background-size: 24px 24px;
+    background-image: 
+      linear-gradient(to right, #6366f1 1px, transparent 1px),
+      linear-gradient(to bottom, #6366f1 1px, transparent 1px);
+  }
+
+    /* .bg-grid-pattern {
+    @apply [background-size:24px_24px] [background-image:linear-gradient(to_right,#6366f1_1px,transparent_1px),linear-gradient(to_bottom,#6366f1_1px,transparent_1px)];
+  } */
+
+  .animate-fade-in {
+    @apply motion-safe:animate-[fade-in_1s_ease-out_forwards];
+  }
+
+  .animate-gradient {
+    @apply bg-[length:200%_auto] motion-safe:animate-[gradient_8s_linear_infinite];
+  }
+
+  .animate-wave {
+    @apply inline-block origin-[70%_70%] motion-safe:animate-[wave_2s_ease-in-out_infinite];
+  }
+
+  .animate-floating {
+    @apply motion-safe:animate-[floating_4s_ease-in-out_infinite];
+  }
+}
+
+/* Keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floating {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Optimization Utilities */
+img,
+.transition-all,
+.transition-transform {
+  @apply transform-gpu;
 }
