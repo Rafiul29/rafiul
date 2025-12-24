@@ -22,11 +22,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: {
     default: "Rafiul Islam | Full Stack Developer",
-    template: "%s | Dev Rafiul Islam",
+    template: "%s | Rafiul Islam",
   },
   description:
     "Rafiul Islam is a Full Stack Web Developer specializing in Next.js, React, Laravel, Django, PHP, REST APIs, and scalable web applications.",
-  applicationName: "Dev Rafiul Islam Portfolio",
+  applicationName: "Rafiul Islam Portfolio",
   keywords: [
     "Dev Rafiul Islam",
     "Developer Rafiul Islam",
@@ -39,15 +39,15 @@ export const metadata: Metadata = {
     "Full Stack Developer Portfolio",
     "Backend Developer Portfolio",
   ],
-  authors: [{ name: "Dev Rafiul Islam" }],
-  creator: "Dev Rafiul Islam",
+  authors: [{ name: "Rafiul Islam" }],
+  creator: "Rafiul Islam",
   metadataBase: new URL("https://rafiul-islam-dev.vercel.app"),
   openGraph: {
-    title: "Dev Rafiul Islam | Full Stack Developer",
+    title: "Rafiul Islam | Full Stack Developer",
     description:
       "Portfolio of Dev Rafiul Islam – Full Stack Developer working with Next.js, React, Django, Laravel, and modern web technologies.",
     url: "/",
-    siteName: "Dev Rafiul Islam Portfolio",
+    siteName: "Rafiul Islam Portfolio",
     images: [
       {
         url: "/profile.png",
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dev Rafiul Islam | Full Stack Developer",
+    title: "Rafiul Islam | Full Stack Developer",
     description:
-      "Dev Rafiul Islam – Full Stack Developer skilled in Next.js, React, Django, and modern web technologies.",
+      "Rafiul Islam – Full Stack Developer skilled in Next.js, React, Django, and modern web technologies.",
     images: ["/profile.png"],
   },
   robots: {
