@@ -43,10 +43,10 @@ export default function Navbar() {
         { href: '#about', label: 'About' },
         { href: '#skills', label: 'Skills' },
         { href: '#projects', label: 'Projects' },
-        { href: '#github', label: 'GitHub' },
-        { href: '#leetcode', label: 'Leetcode' },
-        { href: '#badges', label: 'Badges' },
-        { href: '#blogs', label: 'Blogs' },
+        // { href: '#github', label: 'GitHub' },
+        // { href: '#leetcode', label: 'Leetcode' },
+        // { href: '#badges', label: 'Badges' },
+        // { href: '#blogs', label: 'Blogs' },
         { href: '#experience', label: 'Experience' },
         { href: '#certifications', label: 'Certifications' },
         { href: '#education', label: 'Education' },
@@ -60,9 +60,9 @@ export default function Navbar() {
         >
             <div className="flex items-center justify-between h-12 px-4">
                 {/* Logo */}
-                <div className="cursor-pointer" onClick={handleLogoClick}>
+                <div className="cursor-pointer  text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105" onClick={handleLogoClick}>
                     {/* <img src="/assets/favicon.png" alt="Logo" className="h-8 w-auto" /> */}
-                    Dev R
+                    Md Rafiul Islam
                 </div>
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-5 items-center relative">

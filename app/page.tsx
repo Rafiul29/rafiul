@@ -21,7 +21,7 @@ export default function Home() {
       {/* <GitHub/> */}
       {/* <Certifications/> */}
       {/* <Blogs/> */}
-      <Contact/>
+      <Contact />
     </main>
   );
 }

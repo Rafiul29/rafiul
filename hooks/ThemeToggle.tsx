@@ -12,6 +12,8 @@ export default function ThemeToggle() {
   if (!mounted) return null; // prevent SSR mismatch
 
   const currentTheme = theme === "system" ? systemTheme : theme;
+  console.log({currentTheme})
+  console.log({theme})
 
   return (
     <button
