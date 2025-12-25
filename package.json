@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "github-calendar": "^2.3.4",
     "lucide-react": "^0.562.0",
     "motion": "^12.23.26",

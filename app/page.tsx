@@ -8,7 +8,7 @@ import { GitHub } from "@/components/GitHub";
 import Hero from "@/components/Hero";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
-
+import { Analytics } from "@vercel/analytics/next"
 export default function Home() {
   return (
     <main>
@@ -22,6 +22,7 @@ export default function Home() {
       {/* <Certifications/> */}
       {/* <Blogs/> */}
       <Contact />
+      <Analytics />
     </main>
   );
 }
