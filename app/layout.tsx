@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Rafiul Islam | Full Stack Developer",
     description:
-      "Portfolio of Dev Rafiul Islam – Full Stack Developer working with Next.js, React, Django, Laravel, and modern web technologies.",
+      "Portfolio of Rafiul Islam – Full Stack Developer working with Next.js, React, Django, Laravel, and modern web technologies.",
     url: "/",
     siteName: "Rafiul Islam Portfolio",
     images: [
@@ -111,7 +111,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
-          <GithubStarsButton/>
+          <GithubStarsButton />
         </Providers>
       </body>
     </html>

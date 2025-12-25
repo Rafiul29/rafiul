@@ -1,4 +1,5 @@
 import AboutSection from "@/components/About";
+import { Blogs } from "@/components/Blogs";
 import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import { Education } from "@/components/Education";
@@ -12,13 +13,15 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      
       <AboutSection />
       <Skills />
       <Experience />
       <Projects />
       <Education />
-      <GitHub/>
+      {/* <GitHub/> */}
       {/* <Certifications/> */}
+      {/* <Blogs/> */}
       <Contact/>
     </main>
   );

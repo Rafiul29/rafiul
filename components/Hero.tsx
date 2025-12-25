@@ -27,12 +27,10 @@ export default function Hero() {
     >
       {/* Animated background with particles */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-slate-100/60 to-blue-50/60 dark:from-black dark:via-gray-950 dark:to-slate-950">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.08]" />    {/* Animated gradient orbs */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.04]" />    {/* Animated gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/30 dark:bg-blue-600/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-400/30 dark:bg-purple-600/30 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
-
-
 
       <div className="container mx-auto px-10 py-16 relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -81,6 +79,7 @@ export default function Hero() {
           </Link>
         </div>
       </div>
+
     </section>
 
   );

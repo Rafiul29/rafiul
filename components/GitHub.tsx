@@ -60,7 +60,7 @@ export function GitHub() {
           <div className="mb-10 flex flex-col items-center">
             {/* Card-like container for the GitHub calendar */}
             <div className="w-full p-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
-              {/* <GitHubCalendar
+              <GitHubCalendar
                 username="Rafiul29"
                 blockSize={14.6}
                 blockMargin={5}
@@ -68,8 +68,8 @@ export function GitHub() {
                 theme={{
                   light: ["#afb8c2", "#60a5fa", "#1a53e6", "#1c3dff", "#1c3dff"]
                 }}
-              /> */}
-                
+              />
+
             </div>
           </div>
 
