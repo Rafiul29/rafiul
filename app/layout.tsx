@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { Footer } from "@/components/shared/Footer";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { GithubStarsButton } from "@/components/ui/GithubStarsButton";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -112,6 +113,7 @@ export default function RootLayout({
           <Footer />
           <ScrollToTop />
           <GithubStarsButton />
+          <Analytics />
         </Providers>
       </body>
     </html>
