@@ -1,9 +1,9 @@
 'use client'
 import { useState, useEffect } from "react";
-import { GitHubCalendar } from 'react-github-calendar';
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
 import { Github } from "lucide-react";
+import { GitHubCalendar } from "react-github-calendar";
 
 interface Repo {
   name: string;
@@ -36,8 +36,10 @@ export function GitHub() {
     fetch("https://api.github.com/users/Rafiul29/repos?sort=pushed&direction=desc&per_page=3")
       .then((response) => response.json())
       .then((data) =>
-        setRepos(
-          data.map((repo: any) => ({
+       {
+        console.log(data)
+         setRepos(
+          data?.map((repo: any) => ({
             name: repo.name,
             description: repo.description || "No description available",
             stars: repo.stargazers_count,
@@ -46,6 +48,7 @@ export function GitHub() {
             html_url: repo.html_url,
           }))
         )
+       }
       );
   }, []);
 

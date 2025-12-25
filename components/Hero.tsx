@@ -27,7 +27,7 @@ export default function Hero() {
     >
       {/* Animated background with particles */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-slate-100/60 to-blue-50/60 dark:from-black dark:via-gray-950 dark:to-slate-950">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.04]" />    {/* Animated gradient orbs */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.05]" />    {/* Animated gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/30 dark:bg-blue-600/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-400/30 dark:bg-purple-600/30 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
@@ -62,8 +62,9 @@ export default function Hero() {
 
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
             <img
-              src="profile.png"
-              alt="Deepak Modi"
+              src="/profile.png"
+              alt="Rafiul Islam"
+              loading="eager"
               className="relative w-full max-w-lg mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
           </div>
