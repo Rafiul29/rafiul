@@ -24,54 +24,72 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Rafiul Islam | Full Stack Developer",
-    template: "%s | Rafiul Islam",
+    default: "Rafiul Islam | Expert Full Stack Web Developer",
+    template: "%s | Rafiul Islam - Full Stack Developer",
   },
   description:
-    "Rafiul Islam is a Full Stack Web Developer specializing in Next.js, React, Laravel, Django, PHP, REST APIs, and scalable web applications.",
+    "Rafiul Islam is a top-tier Full Stack Web Developer specializing in high-performance applications with Next.js, React.js, Laravel, Django, Node.js, and modern REST APIs.",
   applicationName: "Rafiul Islam Portfolio",
   keywords: [
+    "Rafiul Islam",
     "Dev Rafiul Islam",
     "Developer Rafiul Islam",
     "Rafiul Islam Full Stack Developer",
     "Rafiul Islam Web Developer",
+    "Hire Rafiul Islam",
+    "Top Full Stack Developer",
     "Next.js Developer Portfolio",
     "React Developer Portfolio",
     "Laravel Backend Developer",
     "Django Backend Developer",
-    "Full Stack Developer Portfolio",
+    "MERN Stack Developer",
     "Backend Developer Portfolio",
+    "Software Engineer Rafiul"
   ],
-  authors: [{ name: "Rafiul Islam" }],
+  authors: [{ name: "Rafiul Islam", url: "https://rafiul-islam-dev.vercel.app" }],
   creator: "Rafiul Islam",
+  publisher: "Rafiul Islam",
   metadataBase: new URL("https://rafiul-islam-dev.vercel.app"),
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: "Rafiul Islam | Full Stack Developer",
+    title: "Rafiul Islam | Expert Full Stack Developer",
     description:
-      "Portfolio of Rafiul Islam – Full Stack Developer working with Next.js, React, Django, Laravel, and modern web technologies.",
-    url: "/",
+      "Explore the portfolio of Rafiul Islam, a Full Stack Developer transforming ideas into high-performance web applications using modern web technologies.",
+    url: "https://rafiul-islam-dev.vercel.app",
     siteName: "Rafiul Islam Portfolio",
     images: [
       {
         url: "/profile.png",
         width: 1200,
         height: 630,
-        alt: "Dev Rafiul Islam Portfolio",
+        alt: "Rafiul Islam - Full Stack Developer",
       },
     ],
     locale: "en_US",
     type: "website",
+    emails: ["rafiulislamcse29@gmail.com"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Rafiul Islam | Full Stack Developer",
     description:
-      "Rafiul Islam – Full Stack Developer skilled in Next.js, React, Django, and modern web technologies.",
+      "Check out the portfolio of Rafiul Islam, a seasoned Full Stack Developer who creates scalable, performant web applications.",
     images: ["/profile.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: "https://rafiul-islam-dev.vercel.app",
@@ -88,12 +106,25 @@ export default function RootLayout({
   const schema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Dev Rafiul Islam",
+    name: "Rafiul Islam",
+    alternateName: "Dev Rafiul Islam",
     url: "https://rafiul-islam-dev.vercel.app",
-    jobTitle: "Full Stack Developer",
+    image: "https://rafiul-islam-dev.vercel.app/profile.png",
+    jobTitle: "Full Stack Web Developer",
+    description: "Expert Full Stack Developer specializing in MERN stack, Next.js, Laravel, and Django.",
+    knowsAbout: [
+      "Web Development",
+      "Full Stack Development",
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "Laravel",
+      "Django",
+      "Software Engineering"
+    ],
     sameAs: [
       "https://github.com/Rafiul29",
-      "https://www.linkedin.com/in/rafiul-islam-cse/",
+      "https://www.linkedin.com/in/rafiul-islam-cse/"
     ],
   };
 
