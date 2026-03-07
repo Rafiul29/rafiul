@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/shared/Navbar";
 import { Providers } from "./providers";
-import { Footer } from "@/components/shared/Footer";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { GithubStarsButton } from "@/components/ui/GithubStarsButton";
 import { Analytics } from "@vercel/analytics/next";
@@ -139,9 +137,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
-          <Navbar />
           {children}
-          <Footer />
           <ScrollToTop />
           <GithubStarsButton />
           <Analytics />
