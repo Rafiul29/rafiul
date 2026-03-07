@@ -24,5 +24,5 @@ export default async function authMiddleware(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/dashboard/:path*", "/admin/:path*"], // Protecting admin/dashboard routes
+    matcher: ["/dashboard/:path*"],
 };
