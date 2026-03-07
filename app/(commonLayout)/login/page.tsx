@@ -25,6 +25,7 @@ export default function LoginPage() {
                 password,
                 callbackURL: "/dashboard",
             });
+            console.log(data, authError);
 
             if (authError) {
                 setError(authError.message || "Invalid credentials");
