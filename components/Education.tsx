@@ -4,22 +4,22 @@ import { EducationCard } from './ui/EducationCard';
 
 const education = [
   {
-    degree: 'B.Tech in Computer Science Engineering',
-    institution: 'St. Andrews Institute of Technology and Management, Gurgaon',
-    period: '2022 - 2026',
-    score: '80%',
+    degree: 'B.Sc. in Computer Science and Engineering',
+    institution: 'Islamic University, Kushtia',
+    period: '2019 – 2025',
+    score: 'CGPA: 3.34 / 4.00',
   },
   {
-    degree: 'Senior Secondary (XII)',
-    institution: 'Inter Science College, Hazaribagh',
-    period: '2019 - 2021',
-    score: '88%',
+    degree: 'Higher Secondary Certificate (Science)',
+    institution: 'Govt. Shaheed Bulbul College, Pabna',
+    period: '2015 – 2017',
+    score: 'GPA: 4.50 / 5.00',
   },
   {
-    degree: 'Secondary (X)',
-    institution: "St. Paul's School, Hazaribagh",
-    period: '2017 - 2019',
-    score: '85.6%',
+    degree: 'Secondary School Certificate (Science)',
+    institution: 'Rajapur High School, Natore',
+    period: '2013 – 2015',
+    score: 'GPA: 4.72 / 5.00',
   },
 ];
 

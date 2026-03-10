@@ -15,7 +15,6 @@ export default async function authMiddleware(request: NextRequest) {
             },
         },
     );
-    console.log("data", session);
 
     if (!session) {
         return NextResponse.redirect(new URL("/login", request.url));

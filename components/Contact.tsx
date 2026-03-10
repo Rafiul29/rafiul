@@ -9,14 +9,14 @@ export function Contact() {
     <SectionBackground>
       <section id="contact">
         <div className="container mx-auto px-4">
-          <SectionTitle subtitle="Got a cool project idea? Want to collaborate? Or just want to say hi? Drop me a line!">Get In Touch</SectionTitle>
+          <SectionTitle subtitle="Ready to build something scalable? Whether it's a project inquiry or just a tech chat, I'm just a message away.">Let's Connect</SectionTitle>
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
             {/* Left Column: Contact Info */}
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">Let's Connect</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
-                Whether you've got a crazy project idea, want to collaborate on something awesome, or just want to chat about tech over coffee ☕ - I'm all ears! And yes, this actually goes straight to my inbox, not some random void like other contact forms.
+                Currently accepting new projects and collaboration opportunities. If you're looking for a developer who prioritizes code integrity and enterprise performance, let’s talk! Your message goes directly to my workspace.
               </p>
 
               <div className="space-y-4">

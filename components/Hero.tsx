@@ -12,10 +12,11 @@ export default function Hero() {
 
   const roles = [
     "Full-Stack Developer",
+    "Backend Developer",
+    "Frontend Developer",
     "Code Enthusiast",
     "Problem Solver",
     "Tech Explorer",
-    "Caffeine-Powered Coder",
   ];
 
   return (
@@ -59,7 +60,11 @@ export default function Hero() {
               </div>
             </div>
 
-            <p className="text-gray-500 dark:text-gray-400 max-w-5xl">I am a passionate developer with a keen interest in building dynamic and responsive web applications. My expertise lies in creating seamless user experiences using modern web technologies.</p>
+            <p className="text-gray-500 dark:text-gray-400 max-w-5xl">
+              {/* I am a passionate developer with a keen interest in building dynamic and responsive web applications. My expertise lies in creating seamless user experiences using modern web technologies. */}
+              {/* As a Full-Stack Developer, I thrive on solving architectural challenges. My expertise lies in crafting secure, enterprise-grade applications using Modern Web Technologies. I am passionate about clean code, data integrity, and creating fluid interfaces that work perfectly across all devices. */}
+              As a Full-Stack Developer, I don't just write code; I architect solutions. I thrive on solving complex structural challenges and crafting secure, enterprise-grade applications using a modern web stack. My commitment to clean code and data integrity ensures long-term scalability, while my focus on fluid, responsive interfaces guarantees a seamless experience for every user, on every device.
+            </p>
             <ActionButtons />
             <SocialLinks />
           </div>
