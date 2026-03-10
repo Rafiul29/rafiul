@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Slider from "react-slick";
 import { SectionTitle } from "./ui/SectionTitle";
@@ -6,42 +7,51 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { CertificationCard } from "./ui/CertificationCard";
 
+
 const certifications = [
   {
-    title: "Generative AI",
-    issuer: "Microsoft & LinkedIn",
-    date: "Nov 2023",
-    link: "https://www.linkedin.com/learning/certificates/4b0455567c3cfda25e8ef1896c3639f05112af66ace4292ed1004466ef830c94",
-    image: "https://media.licdn.com/dms/image/v2/D4D22AQH9Bl60mLooEA/feedshare-shrink_1280/feedshare-shrink_1280/0/1693230478401?e=2147483647&v=beta&t=D95AvRlyCt7mPdJFFCCtaIbkvxz_EcmG0CAReYysB_E",
+    title: "JavaScript Algorithms and Data Structures",
+    issuer: "FreeCodeCamp",
+    date: "Jan 19, 2023",
+    link: "https://www.freecodecamp.org/certification/fccde550765-5a0a-4615-b950-482ea212bb28/javascript-algorithms-and-data-structures",
+    image: "https://www.freecodecamp.org/certification/fccde550765-5a0a-4615-b950-482ea212bb28/javascript-algorithms-and-data-structures",
   },
   {
-    title: "Python 3 Ultimate Guide",
-    issuer: "Udemy",
-    date: "Oct 2023",
-    link: "https://www.udemy.com/certificate/UC-35cedd32-ccc1-4377-b9ef-e8fabda1f457/",
-    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-35cedd32-ccc1-4377-b9ef-e8fabda1f457.jpg?v=1697713760000",
+    title: "Responsive Web Design",
+    issuer: "FreeCodeCamp",
+    date: "May 4, 2023",
+    link: "https://www.freecodecamp.org/certification/fccde550765-5a0a-4615-b950-482ea212bb28/responsive-web-design",
+    image: "https://www.freecodecamp.org/certification/fccde550765-5a0a-4615-b950-482ea212bb28/responsive-web-design",
   },
   {
-    title: "PW Backend Development Course",
-    issuer: "Physics Wallah",
-    date: "Mar 2024",
+    title: "React (Basic) Certificate",
+    issuer: "HackerRank",
+    date: "Jan 11, 2023",
+    link: "https://www.hackerrank.com/certificates/3cf669e5706d",
+    image: "https://www.hackerrank.com/certificates/3cf669e5706d",
+  },
+  {
+    title: "JavaScript (Basic) Certificate",
+    issuer: "HackerRank",
+    date: "Jun 24, 2024",
     link: "https://pwskills.com/learn/certificate/1e3f9e1e-9108-4685-bfa0-6325856f3823/",
-    image: "https://i.ibb.co/gMvXCmVQ/1e3f9e1e-9108-4685-bfa0-6325856f3823-1.png",
+    image: "https://pwskills.com/learn/certificate/1e3f9e1e-9108-4685-bfa0-6325856f3823/",
   },
   {
-    title: "MongoDB Node.js Developer Path",
-    issuer: "MongoDB University",
-    date: "July 2025",
-    link: "https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/fa270117-257f-4f60-8fde-98ae083a7563-deepak-modi-330111ec-2788-4566-b46f-b6cca7389723-certificate.pdf",
-    image: "https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/fa270117-257f-4f60-8fde-98ae083a7563-deepak-modi-330111ec-2788-4566-b46f-b6cca7389723-certificate.pdf",
+    title: "Cascading Style Sheets (CSS)",
+    issuer: "HackerRank",
+    date: "Jan 24, 2024",
+    link: "https://www.hackerrank.com/certificates/8fad4ab6e7b4",
+    image: "https://www.hackerrank.com/certificates/8fad4ab6e7b4",
   },
   {
-    title: "JAVA Course - Mastering the Fundamentals",
-    issuer: "Scaler",
-    date: "Mar 2024",
-    link: "https://moonshot.scaler.com/s/image/li/8T4eLNJyeF",
-    image: "https://moonshot.scaler.com/s/image/li/8T4eLNJyeF?scope=body",
+    title: "Master Git and Github - Beginner to Expert",
+    issuer: "Udemy",
+    date: "May 11, 2023",
+    link: "https://www.udemy.com/certificate/UC-cb6ca2a1-deab-4bee-a1ac-7f07fe87d4f7/",
+    image: "https://www.udemy.com/certificate/UC-cb6ca2a1-deab-4bee-a1ac-7f07fe87d4f7/",
   },
+
 ];
 
 export function Certifications() {
@@ -64,7 +74,7 @@ export function Certifications() {
   return (<SectionBackground>
     <section id="certifications">
       <div className="container mx-auto px-8">
-        <SectionTitle subtitle="Some courses I actually completed instead of just bookmarking them - fancy certificates!">Certifications</SectionTitle>
+        <SectionTitle subtitle="A collection of specialized courses I actually mastered and completed—proven skills beyond just bookmarks.">Certifications & Learning</SectionTitle>
         <Slider {...settings} className="max-w-6xl mx-auto">
           {certifications.map((cert) => (
             <div key={cert.title} className="px-4">

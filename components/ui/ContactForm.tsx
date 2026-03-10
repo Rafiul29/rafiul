@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import {User, Mail,  } from 'lucide-react';
+import { User, Mail, } from 'lucide-react';
 import { LuMessageSquareShare } from "react-icons/lu";
 import { FaRegCommentDots } from 'react-icons/fa';
 
@@ -120,11 +120,10 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className={`w-full py-3 px-6 rounded-lg flex items-center justify-center gap-2 ${
-          status === 'submitting'
-            ? 'bg-blue-400'
-            : 'bg-blue-600 hover:bg-blue-700 text-white'
-        }`}
+        className={`w-full py-3 px-6 rounded-lg flex items-center justify-center gap-2 ${status === 'submitting'
+          ? 'bg-blue-400'
+          : 'bg-blue-600 hover:bg-blue-700 text-white'
+          }`}
       >
         {status === 'submitting' ? 'Sending...' : 'Send Message'}
         {status !== 'submitting' && <LuMessageSquareShare className="w-5 h-5" />}

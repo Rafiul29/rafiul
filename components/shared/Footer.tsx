@@ -29,9 +29,9 @@ export function Footer() {
     { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
     { href: '#github', label: 'GitHub' },
-    { href: '#leetcode', label: 'Leetcode' },
-    { href: '#badges', label: 'Badges' },
-    { href: '#blogs', label: 'Blogs' },
+    // { href: '#leetcode', label: 'Leetcode' },
+    // { href: '#badges', label: 'Badges' },
+    // { href: '#blogs', label: 'Blogs' },
     { href: '#experience', label: 'Experience' },
     { href: '#certifications', label: 'Certifications' },
     { href: '#education', label: 'Education' },
@@ -58,10 +58,10 @@ export function Footer() {
           {/* Copyright */}
           <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
             <p>© {currentYear} MD Rafiul Islam. All rights reserved.</p>
-            <p className="flex items-center justify-center gap-2">
+            {/* <p className="flex items-center justify-center gap-2">
               Built with <FaReact className="w-6 h-6 text-blue-500 animate-spin" /> using
               <SiNextdotjs className="w-6 h-6 animate-pulse" />
-            </p>
+            </p> */}
           </div>
 
           {/* Views Counter */}

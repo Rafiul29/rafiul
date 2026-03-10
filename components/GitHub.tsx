@@ -35,10 +35,9 @@ export function GitHub() {
 
     fetch("https://api.github.com/users/Rafiul29/repos?sort=pushed&direction=desc&per_page=3")
       .then((response) => response.json())
-      .then((data) =>
-       {
+      .then((data) => {
         console.log(data)
-         setRepos(
+        setRepos(
           data?.map((repo: any) => ({
             name: repo.name,
             description: repo.description || "No description available",
@@ -48,7 +47,7 @@ export function GitHub() {
             html_url: repo.html_url,
           }))
         )
-       }
+      }
       );
   }, []);
 

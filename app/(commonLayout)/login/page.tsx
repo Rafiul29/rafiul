@@ -68,7 +68,7 @@ export default function LoginPage() {
             >
                 <div className="text-center mb-8">
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-white via-purple-200 to-gray-400 bg-clip-text text-transparent mb-2">
-                        Admin Login
+                        Login
                     </h1>
                     <p className="text-gray-400 text-sm">
                         Access your portfolio dashboard

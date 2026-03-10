@@ -43,7 +43,7 @@ export default function Navbar() {
         { href: '#about', label: 'About' },
         { href: '#skills', label: 'Skills' },
         { href: '#projects', label: 'Projects' },
-        // { href: '#github', label: 'GitHub' },
+        { href: '#github', label: 'GitHub' },
         // { href: '#leetcode', label: 'Leetcode' },
         // { href: '#badges', label: 'Badges' },
         // { href: '#blogs', label: 'Blogs' },
