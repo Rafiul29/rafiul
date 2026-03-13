@@ -70,11 +70,11 @@ const projects = [
       techStacks.next,
       techStacks.javascript,
       techStacks.typescript,
-      techStacks.postgresql,
       techStacks.shadcn,
       techStacks.tailwind,
+      techStacks.express,
       techStacks.prisma,
-      techStacks.express
+      techStacks.postgresql,
     ],
   },
   {
