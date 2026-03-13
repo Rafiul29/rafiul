@@ -7,11 +7,11 @@ export default function manifest(): MetadataRoute.Manifest {
         description: 'Portfolio of Md Rafiul Islam, a Full-Stack Software Engineer specializing in Next.js, Laravel, and SaaS architecture.',
         start_url: '/',
         display: 'standalone',
-        background_color: '#020617', // আপনার ওয়েবসাইটের ব্যাকগ্রাউন্ড কালার
-        theme_color: '#3b82f6',      // ব্রাউজারের টপ বার বা থিম কালার
+        background_color: '#020617',
+        theme_color: '#3b82f6',
         icons: [
             {
-                src: '/favicon.ico',
+                src: '/icon-192x192.png',
                 sizes: 'any',
                 type: 'image/x-icon',
             },
