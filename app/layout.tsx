@@ -23,7 +23,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Rafiul Islam | Expert Full Stack Web Developer",
+    default: "Rafiul Islam | Full Stack Web Developer",
     template: "%s | Rafiul Islam - Full Stack Developer",
   },
   description:
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Rafiul Islam", url: "/" }],
   creator: "Rafiul Islam",
   publisher: "Rafiul Islam",
-  metadataBase: new URL("/"),
+  metadataBase: new URL("https://rafiul-islam-dev.vercel.app"),
   formatDetection: {
     email: false,
     address: false,
@@ -67,31 +67,15 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Rafiul Islam - Full Stack Developer",
       },
-      {
-        url: "/profile.png",
-        width: 300,
-        height: 300,
-        alt: "Rafiul Islam - Full Stack Developer",
-      },
     ],
     locale: "en_US",
     type: "website",
-    emails: ["rafiulislamcse29@gmail.com"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Rafiul Islam | Full Stack Developer",
-    description:
-      "Check out the portfolio of Rafiul Islam, a seasoned Full Stack Developer who creates scalable, performant web applications.",
+    description: "Check out the portfolio of Rafiul Islam, building scalable web applications.",
     images: ["/profile.png"],
-  },
-  other: {
-    "og:image:secure_url": "/profile.png",
-    "og:image:type": "image/png",
-    "og:image:width": "1200",
-    "og:image:height": "630",
-    "og:image:alt": "Rafiul Islam - Full Stack Developer",
-
   },
   robots: {
     index: true,
