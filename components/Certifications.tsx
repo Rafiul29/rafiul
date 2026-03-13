@@ -58,19 +58,35 @@ export function Certifications() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // Desktop default
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: true,
+    arrows: false,
 
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
-      { breakpoint: 425, settings: { slidesToShow: 1 } },
+      {
+        breakpoint: 1280, // Laptops
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 1024, // Tablets
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768, // Mobile Landscape and below
+        settings: {
+          slidesToShow: 1,
+          centerMode: false, // Ensure this is false so it doesn't show partial slides
+        }
+      }
     ],
   };
-
   return (<SectionBackground>
     <section id="certifications">
       <div className="container mx-auto px-8">
