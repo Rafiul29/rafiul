@@ -1,6 +1,7 @@
 import { SiGithub } from "react-icons/si";
 import { FaGlobe } from "react-icons/fa";
 import { IconType } from 'react-icons';
+import Image from "next/image";
 
 interface TechStackItem {
   icon: IconType;
@@ -23,11 +24,13 @@ export function ProjectCard({ title, description, image, link, github, techStack
       <div className="relative bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:shadow-blue-500/10">
 
         {/* Image */}
-        <div className="relative overflow-hidden p-4 pb-0">
+        <div className="relative overflow-hidden p-4 pb-0 h-56">
           <a href={link} target="_blank" rel="noopener noreferrer">
-            <img
+            <Image
               src={image}
               alt={`Screenshot of ${title}`}
+              width={500}
+              height={720}
               className="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
           </a>
@@ -68,13 +71,13 @@ export function ProjectCard({ title, description, image, link, github, techStack
           </p>
 
           {/* Tech Stack Icons with Tooltip */}
-          <div className="flex flex-wrap gap-3 mt-4">
+          <div className="flex flex-wrap gap-2 mt-4">
             {techStack.map((item, index) => {
               const Icon = item.icon;
               return (
                 <div key={index} className="relative">
                   <div className="peer p-2 rounded-lg bg-gray-200 dark:bg-gray-800">
-                    <Icon className="w-6 h-6" color={item.color} />
+                    <Icon className="w-4 h-4" color={item.color} />
                   </div>
                   {/* Tooltip */}
                   <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs rounded px-2 py-1 

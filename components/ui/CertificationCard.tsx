@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 interface CertificationCardProps {
   title: string;
@@ -13,9 +14,11 @@ export function CertificationCard({ title, issuer, date, link, image }: Certific
   return (
     <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl transition-transform duration-300 overflow-hidden group">
       {/* Background Image */}
-      <img
+      <Image
         src={image}
         alt={`${title} certification`}
+        width={500}
+        height={500}
         className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"
       />
 
