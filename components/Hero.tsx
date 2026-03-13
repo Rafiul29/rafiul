@@ -89,6 +89,8 @@ export default function Hero() {
                 src="/profile.png"
                 alt="Rafiul Islam"
                 loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-full object-cover rounded-full transition-transform duration-500 hover:scale-105" />
             </div>
           </div>
