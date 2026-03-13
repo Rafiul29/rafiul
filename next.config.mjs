@@ -26,15 +26,7 @@ const nextConfig = {
             "react-slick",
             "motion",
             "@better-auth/cli"
-        ],
-        turbo: {
-            rules: {
-                '*.svg': {
-                    loaders: ['@svgr/webpack'],
-                    as: '*.js',
-                },
-            },
-        },
+        ]
     },
 
     async headers() {
