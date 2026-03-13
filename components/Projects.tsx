@@ -1,164 +1,141 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import {
-  SiReact,
-  SiNodedotjs,
-  SiFirebase,
-  SiTailwindcss,
-  SiTypescript,
-  SiNextdotjs,
-  SiMongodb,
-  SiPrisma,
-  SiShadcnui,
-  SiFramer,
-  SiSocketdotio,
-  SiStripe,
-  SiAppwrite,
+  SiReact, SiNodedotjs, SiFirebase, SiTailwindcss, SiTypescript,
+  SiNextdotjs, SiMongodb, SiPrisma, SiShadcnui, SiFramer,
+  SiSocketdotio, SiStripe, SiAppwrite, SiHtml5, SiCss3,
+  SiJavascript, SiRedux, SiExpress, SiPhp, SiLaravel,
+  SiPython, SiDjango, SiSqlite, SiMysql, SiCplusplus,
+  SiPostgresql,
+  SiInertia,
+  SiBootstrap,
+  SiJquery
 } from 'react-icons/si';
 import { ProjectCard } from './ui/ProjectCard';
-
+import { TbBrandDjango } from "react-icons/tb";
 // Define reusable tech stack icons & colors
-const techStacks = {
+export const techStacks = {
+  // Original Stacks
   react: { icon: SiReact, name: "React", color: '#00cfff' },
   node: { icon: SiNodedotjs, name: "Node.js", color: '#228b22' },
   firebase: { icon: SiFirebase, name: "Firebase", color: '#fbbf00' },
   tailwind: { icon: SiTailwindcss, name: "Tailwind CSS", color: '#06b6d4' },
   typescript: { icon: SiTypescript, name: "TypeScript", color: '#1f6feb' },
-  next: { icon: SiNextdotjs, name: "Next.js", color: '#' },
+  next: { icon: SiNextdotjs, name: "Next.js", color: '#000000' }, // Added Black
   mongodb: { icon: SiMongodb, name: "MongoDB", color: '#10b981' },
   prisma: { icon: SiPrisma, name: "Prisma", color: '#186997' },
   shadcn: { icon: SiShadcnui, name: "ShadCN", color: '#6366f1' },
   framer: { icon: SiFramer, name: "Framer Motion", color: '#2563eb' },
-  socket: { icon: SiSocketdotio, name: "Socket.io", color: '#' },
+  socket: { icon: SiSocketdotio, name: "Socket.io", color: '#010101' }, // Added Black
   stripe: { icon: SiStripe, name: "Stripe", color: '#5b4df1' },
   appwrite: { icon: SiAppwrite, name: "Appwrite", color: '#ff3d00' },
+  html: { icon: SiHtml5, name: "HTML", color: '#e34f26' },
+  css: { icon: SiCss3, name: "CSS", color: '#1572b6' },
+  javascript: { icon: SiJavascript, name: "JavaScript", color: '#ffd600' },
+  redux: { icon: SiRedux, name: "Redux", color: '#764abc' },
+  express: { icon: SiExpress, name: "Express.js", color: '#61DAFB' },
+  php: { icon: SiPhp, name: "PHP", color: '#777BB4' },
+  laravel: { icon: SiLaravel, name: "Laravel", color: '#FF2D20' },
+  python: { icon: SiPython, name: "Python", color: '#306998' },
+  django: { icon: SiDjango, name: "Django", color: '#092E20' },
+  drf: {
+    icon: TbBrandDjango,
+    name: "Django REST Framework",
+    color: '#092e20'
+  },
+  sql: { icon: SiSqlite, name: "SQL", color: '#00758F' },
+  mysql: { icon: SiMysql, name: "MySQL", color: '#4479A1' },
+  postgresql: { icon: SiPostgresql, name: "PostgreSQL", color: '#4169E1' },
+  cpp: { icon: SiCplusplus, name: "C++", color: '#00599c' },
+  inertia: {
+    icon: SiInertia,
+    name: "Inertia.js",
+    color: '#9553e9'
+  },
+  bootstrap: { icon: SiBootstrap, name: "Bootstrap", color: '#7952b3' },
+  jquery: { icon: SiJquery, name: "jQuery", color: '#0769ad' },
 };
+
+
 
 // Define projects data
 const projects = [
   {
-    title: 'NotesNeo',
-    description: 'Built this because I was tired of hunting for notes everywhere! A platform where students can actually find and share quality notes by subject. No more "does anyone have notes?" in group chats 😄',
-    image: '/assets/notesneo.webp',
-    link: 'https://notesneo.vercel.app',
-    github: 'https://github.com/decodewithdeepak/notesneo',
-    techStack: [
-      techStacks.react,
-      techStacks.tailwind,
-      techStacks.typescript,
-      techStacks.firebase,
-    ],
-  },
-  {
-    title: 'NeoCode',
-    description: 'My attempt to create the coding platform I wish I had when starting DSA. Curated problem sheets, roadmaps, and a community where you can actually get help without feeling dumb.',
-    image: '/assets/neocode.webp',
-    link: 'https://neocoding.vercel.app',
-    github: 'https://github.com/decodewithdeepak/neocode',
-    techStack: [
-      techStacks.react,
-      techStacks.tailwind,
-      techStacks.typescript,
-      techStacks.mongodb,
-      techStacks.prisma,
-    ],
-  },
-  {
-    title: 'NeoCompiler',
-    description: 'Ever wanted to quickly test code without setting up your entire dev environment? This online compiler has your back! Multiple languages, themes, and even AI suggestions when you\'re stuck.',
-    image: '/assets/neocompiler.webp',
-    link: 'https://neocompiler.vercel.app',
-    github: 'https://github.com/decodewithdeepak/neo-compiler',
+    title: 'Apex Learning',
+    description: 'A comprehensive full-stack platform connecting students with expert tutors. Features real-time booking, session tracking, and a robust admin dashboard.',
+    image: '/images/projects/apex-learning.png',
+    link: 'https://apexlearning-edu.vercel.app/',
+    github: 'https://github.com/Rafiul29/apexlearning-client.git',
     techStack: [
       techStacks.next,
+      techStacks.javascript,
       techStacks.typescript,
+      techStacks.postgresql,
+      techStacks.shadcn,
       techStacks.tailwind,
-      techStacks.mongodb,
       techStacks.prisma,
+      techStacks.express
+    ],
+  },
+  {
+    title: 'News Paper',
+    description: 'A modern news portal offering real-time updates and a responsive reading experience. Optimized specifically for Bangla audiences with a clean UI.',
+    image: '/images/projects/news-paper.png',
+    link: 'https://newspaper1.zipsoftbd.com/',
+    github: '',
+    techStack: [
+      techStacks.laravel,
+      techStacks.react,
+      techStacks.inertia,
+      techStacks.mysql,
+      techStacks.tailwind,
       techStacks.shadcn,
     ],
   },
   {
-    title: 'Portfolio',
-    description: 'You\'re looking at it right now! 😉 This site went through like 5 redesigns before I was happy with it. Clean, responsive, and shows off my work while keeping things simple and professional.',
-    image: '/assets/portfolio.webp',
-    link: 'https://deepakmodi.vercel.app',
-    github: 'https://github.com/decodewithdeepak/portfolio',
+    title: 'UrbanHut',
+    description: 'A premium furniture e-commerce site featuring brand management and dynamic filtering. Built for high-performance browsing and a secure checkout flow.',
+    image: '/images/projects/urbanhut.png',
+    link: 'https://ecommerce1.zipsoftbd.com',
+    github: 'https://github.com/Rafiul29/urbanhut.git',
     techStack: [
-      techStacks.next,
-      techStacks.react,
-      techStacks.typescript,
-      techStacks.tailwind,
-      techStacks.framer,
+      techStacks.laravel,
+      techStacks.mysql,
+      techStacks.javascript,
+      techStacks.bootstrap,
+      techStacks.jquery
     ],
   },
   {
-    title: 'Braineo',
-    description: 'Learning shouldn\'t be boring! Built this AI-powered platform to make studying actually engaging instead of just memorizing stuff for exams. Interactive courses and quizzes.',
-    image: '/assets/braineo.webp',
-    link: 'https://braineo.vercel.app',
-    github: 'https://github.com/decodewithdeepak/braineo',
+    title: 'Shopswing',
+    description: 'An intuitive e-commerce solution enabling customers to browse products and manage carts seamlessly. Focused on speed and a frictionless user journey.',
+    image: '/images/projects/shopswing.png',
+    link: 'https://shopswing.zipsoftbd.com/',
+    github: 'https://github.com/Rafiul29/shopswing.git',
     techStack: [
+      techStacks.laravel,
       techStacks.react,
-      techStacks.typescript,
+      techStacks.inertia,
+      techStacks.mysql,
       techStacks.tailwind,
-      techStacks.appwrite,
-      techStacks.framer,
+      techStacks.shadcn,
     ],
   },
   {
-    title: 'Placify',
-    description: 'Built this during placement season when I realized how chaotic the whole process was. A platform that actually makes job hunting on campus less stressful with proper job listings.',
-    image: '/assets/placify.webp',
-    github: 'https://github.com/decodewithdeepak/placify',
+    title: 'Tasty Trails',
+    description: 'A dynamic food delivery app where users can track orders in real-time. Streamlines the bridge between hungry customers and efficient kitchen management.',
+    image: '/images/projects/tasty-trails.png',
+    link: 'https://tasty-trails-client.vercel.app/',
+    github: 'https://github.com/Rafiul29/tasty-trails-client.git',
     techStack: [
-      techStacks.next,
-      techStacks.typescript,
-      techStacks.tailwind,
-      techStacks.mongodb,
-      techStacks.prisma,
-    ],
-  },
-  {
-    title: 'NeoFolio',
-    description: 'Too lazy to build a custom portfolio? Don\'t have time to code? I got you! This is a clean, modern template that developers can easily customize without writing a single line of code.',
-    image: '/assets/neofolio.webp',
-    link: 'https://neofolio.vercel.app',
-    github: 'https://github.com/decodewithdeepak/neofolio',
-    techStack: [
+      techStacks.django,
       techStacks.react,
-      techStacks.typescript,
+      techStacks.redux,
       techStacks.tailwind,
-      techStacks.firebase,
-      techStacks.framer,
+      techStacks.postgresql,
+      techStacks.drf,
     ],
-  },
-  {
-    title: 'Finneo',
-    description: 'Investment advice shouldn\'t be rocket science! This AI-powered platform breaks down investing for beginners - just tell it your goals, risk tolerance, and budget, and you are good to go.',
-    image: '/assets/finneo.webp',
-    link: 'https://finneo.vercel.app',
-    github: 'https://github.com/decodewithdeepak/finneo',
-    techStack: [
-      techStacks.react,
-      techStacks.typescript,
-      techStacks.tailwind,
-      techStacks.framer,
-      techStacks.appwrite,
-    ],
-  },
-  {
-    title: 'Ajay Sharma',
-    description: 'My first real freelance project! Built a landing page for Ajay Sharma, a self-empowerment coach. Clean design, clear pricing, and smooth payment integration for his coaching services.',
-    image: '/assets/ajaysharma.webp',
-    link: 'https://ajay-sharma.vercel.app',
-    techStack: [
-      techStacks.react,
-      techStacks.typescript,
-      techStacks.tailwind,
-      techStacks.stripe,
-    ],
-  },
+  }
 ];
 
 export function Projects() {

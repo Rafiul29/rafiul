@@ -1,6 +1,6 @@
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
-import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiExpress, SiGraphql, SiMongodb, SiPrisma, SiCplusplus, SiGit, SiGithub, SiPostman, SiVite, SiVercel, SiPhp, SiLaravel, SiDjango, SiMysql, SiSqlite, SiNetlify, SiRender } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiExpress, SiGraphql, SiMongodb, SiPrisma, SiCplusplus, SiGit, SiGithub, SiPostman, SiVite, SiVercel, SiPhp, SiLaravel, SiDjango, SiMysql, SiSqlite, SiNetlify, SiRender, SiCpanel } from "react-icons/si";
 import { FaNodeJs, FaPython, FaJava, FaAws, FaWindows, FaLinux } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { IoLogoFirebase } from "react-icons/io5";
@@ -34,6 +34,7 @@ const skills = [
     { name: "GitHub", icon: SiGithub, color: "# ", url: "https://github.com/" },
     { name: "Postman", icon: SiPostman, color: "#ff6c37", url: "https://www.postman.com/" },
     { name: "Vite", icon: SiVite, color: "#646cff", url: "https://vitejs.dev/" },
+    { name: "cPanel", icon: SiCpanel, color: "#FF6C2C", url: "https://cpanel.net/" },
     { name: "Vercel", icon: SiVercel, color: "#000000", url: "https://vercel.com/" },
     { name: "Netlify", icon: SiNetlify, color: "#00C7B7", url: "https://www.netlify.com/" },
     { name: "Render", icon: SiRender, color: "#46E3B7", url: "https://render.com/" },
