@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     siteName: "Rafiul Islam Portfolio",
     images: [
       {
-        url: "/profile.png",
+        url: "/api/og",
         width: 1200,
         height: 630,
         alt: "Rafiul Islam - Full Stack Developer",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rafiul Islam | Full Stack Developer",
     description: "Check out the portfolio of Rafiul Islam, building scalable web applications.",
-    images: ["/profile.png"],
+    images: ["/api/og"],
   },
   robots: {
     index: true,
@@ -106,7 +106,7 @@ export default function RootLayout({
     name: "Rafiul Islam",
     alternateName: "Dev Rafiul Islam",
     url: "https://rafiul-islam-dev.vercel.app",
-    image: "https://rafiul-islam-dev.vercel.app/profile.png",
+    image: "/api/og",
     jobTitle: "Full Stack Web Developer",
     description: "Expert Full Stack Developer specializing in MERN stack, Next.js, Laravel, and Django.",
     knowsAbout: [

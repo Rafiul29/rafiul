@@ -11,14 +11,14 @@ export async function GET() {
                     flexDirection: 'row',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: '#0f172a', // Dark blue background
+                    backgroundColor: '#0f172a',
                     padding: '40px',
                 }}
             >
                 {/* Profile Image Section */}
                 <div style={{ display: 'flex', marginRight: '60px' }}>
                     <img
-                        src="https://rafiul-islam-dev.vercel.app/profile.png" // আপনার লাইভ ইমেজের লিঙ্ক
+                        src="https://rafiul-islam-dev.vercel.app/profile.png"
                         style={{
                             width: '300px',
                             height: '300px',
