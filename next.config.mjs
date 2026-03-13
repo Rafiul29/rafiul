@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    compress: true,
+    productionBrowserSourceMaps: false,
+    // Disabling the indicator slightly reduces main-thread noise in dev/prod
+    devIndicators: {
+        appIsrStatus: false,
+    },
     images: {
         // Next.js will use these formats to optimize your PNGs/JPGs
         formats: ["image/avif", "image/webp"],
@@ -7,6 +13,7 @@ const nextConfig = {
         // These are the widths Next.js will generate for different devices
         deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
         imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+        minimumCacheTTL: 31536000,
     },
 
     compress: true,
@@ -16,8 +23,18 @@ const nextConfig = {
         optimizePackageImports: [
             "lucide-react",
             "react-icons",
-            "react-slick", // Added this to help your certifications slider load faster
+            "react-slick",
+            "motion",
+            "@better-auth/cli"
         ],
+        turbo: {
+            rules: {
+                '*.svg': {
+                    loaders: ['@svgr/webpack'],
+                    as: '*.js',
+                },
+            },
+        },
     },
 
     async headers() {
@@ -28,6 +45,25 @@ const nextConfig = {
                     {
                         key: "Cache-Control",
                         value: "public, max-age=31536000, immutable",
+                    },
+                ],
+            },
+            {
+                // Help reduce INP by telling the browser to prioritize 
+                // security headers without blocking rendering
+                source: "/(.*)",
+                headers: [
+                    {
+                        key: "X-Content-Type-Options",
+                        value: "nosniff",
+                    },
+                    {
+                        key: "X-Frame-Options",
+                        value: "DENY",
+                    },
+                    {
+                        key: "Referrer-Policy",
+                        value: "strict-origin-when-cross-origin",
                     },
                 ],
             },

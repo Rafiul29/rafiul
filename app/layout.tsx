@@ -45,26 +45,32 @@ export const metadata: Metadata = {
     "Backend Developer Portfolio",
     "Software Engineer Rafiul"
   ],
-  authors: [{ name: "Rafiul Islam", url: "https://rafiul-islam-dev.vercel.app" }],
+  authors: [{ name: "Rafiul Islam", url: "/" }],
   creator: "Rafiul Islam",
   publisher: "Rafiul Islam",
-  metadataBase: new URL("https://rafiul-islam-dev.vercel.app"),
+  metadataBase: new URL("/"),
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Rafiul Islam | Expert Full Stack Developer",
+    title: "Rafiul Islam | Full Stack Developer",
     description:
       "Explore the portfolio of Rafiul Islam, a Full Stack Developer transforming ideas into high-performance web applications using modern web technologies.",
-    url: "https://rafiul-islam-dev.vercel.app",
+    url: "/",
     siteName: "Rafiul Islam Portfolio",
     images: [
       {
         url: "/profile.png",
         width: 1200,
         height: 630,
+        alt: "Rafiul Islam - Full Stack Developer",
+      },
+      {
+        url: "/profile.png",
+        width: 300,
+        height: 300,
         alt: "Rafiul Islam - Full Stack Developer",
       },
     ],
@@ -79,6 +85,14 @@ export const metadata: Metadata = {
       "Check out the portfolio of Rafiul Islam, a seasoned Full Stack Developer who creates scalable, performant web applications.",
     images: ["/profile.png"],
   },
+  other: {
+    "og:image:secure_url": "/profile.png",
+    "og:image:type": "image/png",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:image:alt": "Rafiul Islam - Full Stack Developer",
+
+  },
   robots: {
     index: true,
     follow: true,
@@ -91,7 +105,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://rafiul-islam-dev.vercel.app",
+    canonical: "/",
   },
 };
 
