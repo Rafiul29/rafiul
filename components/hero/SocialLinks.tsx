@@ -1,5 +1,5 @@
 import { Github, Linkedin, Instagram } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaFacebook } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const links = [
@@ -13,18 +13,18 @@ const links = [
     icon: <Linkedin className="w-6 h-6 text-[#0077B5]" />,
     label: 'LinkedIn',
   },
-  // {
-  //   href: 'https://instagram.com/deepakmodi.io',
-  //   icon: <Instagram className="w-6 h-6 text-[#E1306C]" />,
-  //   label: 'Instagram',
-  // },
   {
-    href: '#',
+    href: 'https://www.facebook.com/mdrafiulislamrafi29/',
+    icon: <FaFacebook className="w-6 h-6 text-[#0077B5]" />,
+    label: 'Facebook',
+  },
+  {
+    href: 'https://wa.me/+8801571257567?text="Hello, I am interested in working with you."',
     icon: <FaWhatsapp className="w-6 h-6 text-[#25D366]" />,
     label: 'WhatsApp',
   },
   {
-    href: '#',
+    href: 'https://x.com/RafiulI51329536',
     icon: <FaXTwitter className="w-6 h-6 text-gray-900 dark:text-white" />,
     label: 'Twitter',
   },

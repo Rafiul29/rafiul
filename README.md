@@ -6,6 +6,8 @@ First, run the development server:
 
 ```bash
 npm run dev
+npx tsx prisma/seed.ts
+npx prisma db seed
 # or
 yarn dev
 # or
