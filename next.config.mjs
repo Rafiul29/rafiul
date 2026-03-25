@@ -41,8 +41,25 @@ const nextConfig = {
                 ],
             },
             {
-                // Help reduce INP by telling the browser to prioritize 
-                // security headers without blocking rendering
+                // Allow PDF files to be embedded on the same origin (needed for <embed>/<iframe> viewer)
+                source: "/cv-resume/:path*",
+                headers: [
+                    {
+                        key: "X-Frame-Options",
+                        value: "SAMEORIGIN",
+                    },
+                    {
+                        key: "Content-Type",
+                        value: "application/pdf",
+                    },
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=86400",
+                    },
+                ],
+            },
+            {
+                // Security headers for all other routes
                 source: "/(.*)",
                 headers: [
                     {

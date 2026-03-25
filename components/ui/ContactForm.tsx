@@ -28,20 +28,20 @@ export function ContactForm() {
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://formspree.io/f/mvggvyar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      // const response = await fetch('https://formspree.io/f/mvggvyar', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData),
+      // });
 
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' }); // Reset the form
-      } else {
-        const errorData = await response.json();
-        setErrorMessage(errorData.error || 'Something went wrong. Please try again.');
-        setStatus('error');
-      }
+      // if (response.ok) {
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' }); // Reset the form
+      // } else {
+      //   const errorData = await response.json();
+      //   setErrorMessage(errorData.error || 'Something went wrong. Please try again.');
+      //   setStatus('error');
+      // }
     } catch (error) {
       setErrorMessage('An unexpected error occurred. Please try again.');
       setStatus('error');

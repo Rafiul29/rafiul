@@ -60,10 +60,10 @@ export default function Navbar() {
         >
             <div className="flex items-center justify-between h-12 px-4">
                 {/* Logo */}
-                <div className="cursor-pointer  text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105" onClick={handleLogoClick}>
+                <Link href={'/'} className="cursor-pointer  text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105" >
                     {/* <img src="/assets/favicon.png" alt="Logo" className="h-8 w-auto" /> */}
                     Md Rafiul Islam
-                </div>
+                </Link>
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-5 items-center relative">
                     {navLinks.map((link) => (
