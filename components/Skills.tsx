@@ -1,15 +1,16 @@
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
-import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiExpress, SiGraphql, SiMongodb, SiPrisma, SiCplusplus, SiGit, SiGithub, SiPostman, SiVite, SiVercel, SiPhp, SiLaravel, SiDjango, SiMysql, SiSqlite, SiNetlify, SiRender, SiCpanel } from "react-icons/si";
+import { SiHtml5, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiExpress, SiGraphql, SiMongodb, SiPrisma, SiCplusplus, SiGit, SiGithub, SiPostman, SiVite, SiVercel, SiPhp, SiLaravel, SiDjango, SiMysql, SiSqlite, SiNetlify, SiRender, SiCpanel } from "react-icons/si";
 import { FaNodeJs, FaPython, FaJava, FaAws, FaWindows, FaLinux } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SkillCard } from "./ui/SkillCard";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { FaCss } from "react-icons/fa6";
 
 const skills = [
     { name: "HTML", icon: SiHtml5, color: "#e34f26", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-    { name: "CSS", icon: SiCss3, color: "#1572b6", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { name: "CSS", icon: FaCss, color: "#1572b6", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
     { name: "JavaScript", icon: SiJavascript, color: "#ffd600", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
     { name: "TypeScript", icon: SiTypescript, color: "#3178c6", url: "https://www.typescriptlang.org/" },
     { name: "React", icon: SiReact, color: "#61dafb", url: "https://react.dev/" },

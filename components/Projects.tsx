@@ -3,7 +3,7 @@ import { SectionBackground } from './ui/SectionBackground';
 import {
   SiReact, SiNodedotjs, SiFirebase, SiTailwindcss, SiTypescript,
   SiNextdotjs, SiMongodb, SiPrisma, SiShadcnui, SiFramer,
-  SiSocketdotio, SiStripe, SiAppwrite, SiHtml5, SiCss3,
+  SiSocketdotio, SiStripe, SiAppwrite, SiHtml5,
   SiJavascript, SiRedux, SiExpress, SiPhp, SiLaravel,
   SiPython, SiDjango, SiSqlite, SiMysql, SiCplusplus,
   SiPostgresql,
@@ -13,6 +13,7 @@ import {
 } from 'react-icons/si';
 import { ProjectCard } from './ui/ProjectCard';
 import { TbBrandDjango } from "react-icons/tb";
+import { FaCss } from "react-icons/fa6";
 // Define reusable tech stack icons & colors
 export const techStacks = {
   // Original Stacks
@@ -30,7 +31,7 @@ export const techStacks = {
   stripe: { icon: SiStripe, name: "Stripe", color: '#5b4df1' },
   appwrite: { icon: SiAppwrite, name: "Appwrite", color: '#ff3d00' },
   html: { icon: SiHtml5, name: "HTML", color: '#e34f26' },
-  css: { icon: SiCss3, name: "CSS", color: '#1572b6' },
+  css: { icon: FaCss, name: "CSS", color: '#1572b6' },
   javascript: { icon: SiJavascript, name: "JavaScript", color: '#ffd600' },
   redux: { icon: SiRedux, name: "Redux", color: '#764abc' },
   express: { icon: SiExpress, name: "Express.js", color: '#61DAFB' },
