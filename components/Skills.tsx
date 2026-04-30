@@ -106,7 +106,7 @@ export function Skills() {
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="max-w-6xl mx-auto px-6 relative z-10">
                     <SectionTitle subtitle="The tech stack I've been collecting like Pokémon cards - gotta catch 'em all! 🎯">
                         Skills & Expertise
                     </SectionTitle>
@@ -122,48 +122,38 @@ export function Skills() {
                             <motion.div
                                 key={category.title}
                                 variants={itemVariants}
-                                className="bg-white/60 dark:bg-gray-900/40 backdrop-blur-2xl border border-white dark:border-gray-800/50 rounded-[2rem] p-5 shadow-2xl shadow-gray-200/50 dark:shadow-none transition-all duration-500 group relative overflow-hidden"
+                                className="relative group"
                             >
-                                {/* Subtle Background Category Color Glow */}
+                                {/* Glow Effect */}
                                 <div
-                                    className="absolute -top-24 -right-24 w-64 h-64 rounded-full blur-[100px] opacity-10 group-hover:opacity-20 transition-opacity duration-700"
+                                    className="absolute inset-0 rounded-xl blur-xl opacity-5 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none"
                                     style={{ backgroundColor: category.color }}
                                 />
 
-                                {/* Category Header */}
-                                <div className="flex items-center gap-6 mb-12">
-                                    <div
-                                        className="w-16 h-16 flex items-center justify-center rounded-xl shadow-xl group-hover:scale-110 transition-transform duration-700 relative overflow-hidden"
-                                        style={{ backgroundColor: `${category.color}10` }}
-                                    >
-                                        <category.icon size={32} color={category.color} strokeWidth={1.5} className="relative z-10" />
+                                {/* Card Content */}
+                                <div className="relative h-full bg-white dark:bg-gray-900 p-8 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                    <div className="flex items-center mb-8 space-x-4">
                                         <div
-                                            className="absolute inset-0 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-700"
+                                            className="p-3 rounded-lg shadow-lg"
                                             style={{ backgroundColor: category.color }}
-                                        />
+                                        >
+                                            <category.icon className="w-6 h-6 text-white" />
+                                        </div>
+                                        <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-100">{category.title}</h3>
                                     </div>
-                                    <div>
-                                        <h3 className="text-2xl font-black tracking-tighter text-gray-900 dark:text-white mb-2">
-                                            {category.title}
-                                        </h3>
-                                        <div
-                                            className="h-1.5 w-16 rounded-full transition-all duration-500 group-hover:w-24"
-                                            style={{ backgroundColor: category.color }}
-                                        />
-                                    </div>
-                                </div>
 
-                                {/* Skills Grid */}
-                                <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-5">
-                                    {category.skills.map((tech) => (
-                                        <SkillCard
-                                            key={tech.name}
-                                            name={tech.name}
-                                            icon={tech.icon}
-                                            color={tech.color}
-                                            url={tech.url}
-                                        />
-                                    ))}
+                                    {/* Skills Grid */}
+                                    <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4">
+                                        {category.skills.map((tech) => (
+                                            <SkillCard
+                                                key={tech.name}
+                                                name={tech.name}
+                                                icon={tech.icon}
+                                                color={tech.color}
+                                                url={tech.url}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
