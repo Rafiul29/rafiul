@@ -62,6 +62,23 @@ export const techStacks = {
 // Define projects data
 const projects = [
   {
+    title: 'EcoVault',
+    description: 'Where Green Ideas Meet Real Impact. A comprehensive platform for submitting, discovering, and investing in eco-friendly innovations, connecting sustainability entrepreneurs with a global community.',
+    image: '/images/projects/ecovault.png',
+    link: 'https://ecovault-client.vercel.app/',
+    github: 'https://github.com/Rafiul29/ecovault-client.git',
+    techStack: [
+      techStacks.next,
+      techStacks.javascript,
+      techStacks.typescript,
+      techStacks.shadcn,
+      techStacks.tailwind,
+      techStacks.express,
+      techStacks.prisma,
+      techStacks.postgresql,
+    ],
+  },
+  {
     title: 'Apex Learning',
     description: 'A comprehensive full-stack platform connecting students with expert tutors. Features real-time booking, session tracking, and a robust admin dashboard.',
     image: '/images/projects/apex-learning.png',

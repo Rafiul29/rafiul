@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { IconType } from "react-icons";
 import { LucideIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface SkillCardProps {
   name: string;
@@ -11,21 +14,36 @@ interface SkillCardProps {
 
 export function SkillCard({ name, icon: Icon, color, url }: SkillCardProps) {
   return (
-    <a
+    <motion.a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex flex-col items-center p-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-2xl 
-        before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-transparent before:to-[var(--glow-color,rgba(255,255,255,0))] before:opacity-0 before:blur-lg before:transition-all before:duration-500 hover:before:opacity-50"
-      style={{ "--glow-color": color } as React.CSSProperties}
+      whileHover={{ y: -5, scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="group relative flex flex-col items-center justify-center p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border border-gray-100 dark:border-gray-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300"
     >
-      {/* Icon with Background */}
-      <div className="p-3 rounded-full transition-all duration-300 group-hover:scale-110" style={{ backgroundColor: `${color}1A` }}>
-        <Icon size={50} color={color} className="group-hover:brightness-100" />
+      {/* Dynamic Glow Effect */}
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl blur-xl"
+        style={{ backgroundColor: color }}
+      />
+
+      {/* Icon Container */}
+      <div
+        className="relative z-10 p-3 rounded-xl transition-all duration-300 group-hover:scale-110 mb-2"
+        style={{ backgroundColor: `${color}15` }}
+      >
+        <Icon
+          size={32}
+          color={color}
+          className="filter transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+        />
       </div>
 
       {/* Skill Name */}
-      <span className="mt-2 text-sm font-medium text-gray-900 dark:text-gray-100">{name}</span>
-    </a>
+      <span className="relative z-10 text-[10px] font-bold text-gray-500 dark:text-gray-400 tracking-wider uppercase group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300 text-center leading-tight">
+        {name}
+      </span>
+    </motion.a>
   );
 }
