@@ -26,7 +26,6 @@ const skillCategories = [
             { name: "Next.js", icon: SiNextdotjs, color: "#000000", url: "https://nextjs.org/" },
             { name: "TailwindCSS", icon: SiTailwindcss, color: "#38bdf8", url: "https://tailwindcss.com/" },
             { name: "Redux", icon: SiRedux, color: "#764abc", url: "https://redux.js.org/" },
-            { name: "Vite", icon: SiVite, color: "#646cff", url: "https://vitejs.dev/" },
         ]
     },
     {
@@ -40,7 +39,6 @@ const skillCategories = [
             { name: "Laravel", icon: SiLaravel, color: "#FF2D20", url: "https://laravel.com/" },
             { name: "Python", icon: FaPython, color: "#306998", url: "https://www.python.org/" },
             { name: "DJango", icon: SiDjango, color: "#092E20", url: "https://www.djangoproject.com/" },
-            { name: "C++", icon: SiCplusplus, color: "#00599c", url: "https://cplusplus.com/" },
         ]
     },
     {
@@ -53,7 +51,6 @@ const skillCategories = [
             { name: "Postgresql", icon: BiLogoPostgresql, color: "#4169E1", url: "https://www.postgresql.org/" },
             { name: "MongoDB", icon: SiMongodb, color: "#47a248", url: "https://www.mongodb.com/" },
             { name: "Prisma", icon: SiPrisma, color: "#2D3748", url: "https://www.prisma.io/" },
-            { name: "Firebase", icon: IoLogoFirebase, color: "#ffca28", url: "https://firebase.google.com/" },
         ]
     },
     {
@@ -61,13 +58,11 @@ const skillCategories = [
         icon: Settings,
         color: "#f34f29",
         skills: [
-            { name: "VS Code", icon: VscVscode, color: "#007acc", url: "https://code.visualstudio.com/" },
             { name: "Git", icon: SiGit, color: "#f34f29", url: "https://git-scm.com/" },
             { name: "GitHub", icon: SiGithub, color: "#000000", url: "https://github.com/" },
             { name: "Postman", icon: SiPostman, color: "#ff6c37", url: "https://www.postman.com/" },
             { name: "cPanel", icon: SiCpanel, color: "#FF6C2C", url: "https://cpanel.net/" },
             { name: "Vercel", icon: SiVercel, color: "#000000", url: "https://vercel.com/" },
-            { name: "Netlify", icon: SiNetlify, color: "#00C7B7", url: "https://www.netlify.com/" },
             { name: "Render", icon: SiRender, color: "#46E3B7", url: "https://render.com/" },
             { name: "Windows", icon: FaWindows, color: "#0078D6", url: "https://www.microsoft.com/windows" },
             { name: "Linux", icon: FaLinux, color: "#FCC624", url: "https://www.kernel.org/" },
