@@ -125,20 +125,21 @@ const projects = [
       techStacks.tailwind,
     ],
   },
-  // {
-  //   title: 'UrbanHut',
-  //   description: 'A premium furniture e-commerce site featuring brand management and dynamic filtering. Built for high-performance browsing and a secure checkout flow.',
-  //   image: '/images/projects/urbanhut.png',
-  //   link: 'https://ecommerce1.zipsoftbd.com',
-  //   github: 'https://github.com/Rafiul29/urbanhut.git',
-  //   techStack: [
-  //     techStacks.laravel,
-  //     techStacks.mysql,
-  //     techStacks.javascript,
-  //     techStacks.bootstrap,
-  //     techStacks.jquery
-  //   ],
-  // },
+  {
+    title: 'UrbanHut',
+    description: 'A premium furniture e-commerce site featuring brand management and dynamic filtering. Built for high-performance browsing and a secure checkout flow.',
+    image: '/images/projects/urbanhut.png',
+    link: 'https://ecommerce1.zipsoftbd.com',
+    github: 'https://github.com/Rafiul29/urbanhut.git',
+    techStack: [
+      techStacks.php,
+      techStacks.laravel,
+      techStacks.mysql,
+      techStacks.javascript,
+      techStacks.bootstrap,
+      techStacks.jquery
+    ],
+  },
   {
     title: 'Shopswing',
     description: 'An intuitive e-commerce solution enabling customers to browse products and manage carts seamlessly. Focused on speed and a frictionless user journey.',
@@ -146,6 +147,7 @@ const projects = [
     link: 'https://shopswing.zipsoftbd.com/',
     github: 'https://github.com/Rafiul29/shopswing.git',
     techStack: [
+      techStacks.php,
       techStacks.laravel,
       techStacks.react,
       techStacks.inertia,
@@ -154,21 +156,21 @@ const projects = [
       techStacks.shadcn,
     ],
   },
-  {
-    title: 'Tasty Trails',
-    description: 'A dynamic food delivery app where users can track orders in real-time. Streamlines the bridge between hungry customers and efficient kitchen management.',
-    image: '/images/projects/tasty-trails.png',
-    link: 'https://tasty-trails-client.vercel.app/',
-    github: 'https://github.com/Rafiul29/tasty-trails-client.git',
-    techStack: [
-      techStacks.django,
-      techStacks.react,
-      techStacks.redux,
-      techStacks.tailwind,
-      techStacks.postgresql,
-      techStacks.drf,
-    ],
-  }
+  // {
+  //   title: 'Tasty Trails',
+  //   description: 'A dynamic food delivery app where users can track orders in real-time. Streamlines the bridge between hungry customers and efficient kitchen management.',
+  //   image: '/images/projects/tasty-trails.png',
+  //   link: 'https://tasty-trails-client.vercel.app/',
+  //   github: 'https://github.com/Rafiul29/tasty-trails-client.git',
+  //   techStack: [
+  //     techStacks.django,
+  //     techStacks.react,
+  //     techStacks.redux,
+  //     techStacks.tailwind,
+  //     techStacks.postgresql,
+  //     techStacks.drf,
+  //   ],
+  // }
 ];
 
 export function Projects() {
