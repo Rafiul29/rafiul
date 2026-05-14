@@ -85,6 +85,7 @@ const projects = [
     link: 'https://apexlearning-edu.vercel.app/',
     github: 'https://github.com/Rafiul29/apexlearning-client.git',
     techStack: [
+
       techStacks.next,
       techStacks.javascript,
       techStacks.typescript,
@@ -100,8 +101,9 @@ const projects = [
     description: 'A modern news portal offering real-time updates and a responsive reading experience. Optimized specifically for Bangla audiences with a clean UI.',
     image: '/images/projects/news-paper.png',
     link: 'https://newspaper1.zipsoftbd.com/',
-    github: '',
+    github: 'https://github.com/Rafiul29/newspaper.git',
     techStack: [
+      techStacks.php,
       techStacks.laravel,
       techStacks.react,
       techStacks.inertia,
@@ -111,19 +113,32 @@ const projects = [
     ],
   },
   {
-    title: 'UrbanHut',
-    description: 'A premium furniture e-commerce site featuring brand management and dynamic filtering. Built for high-performance browsing and a secure checkout flow.',
-    image: '/images/projects/urbanhut.png',
-    link: 'https://ecommerce1.zipsoftbd.com',
-    github: 'https://github.com/Rafiul29/urbanhut.git',
+    title: 'Smart Inventory POS & Invoice System',
+    description: 'The Smart Inventory POS & Invoice System is a professional-grade solution designed to streamline retail operations.',
+    image: '/images/projects/smart-inventory.png',
+    link: '',
+    github: 'https://github.com/Rafiul29/retailhub.git',
     techStack: [
+      techStacks.php,
       techStacks.laravel,
       techStacks.mysql,
-      techStacks.javascript,
-      techStacks.bootstrap,
-      techStacks.jquery
+      techStacks.tailwind,
     ],
   },
+  // {
+  //   title: 'UrbanHut',
+  //   description: 'A premium furniture e-commerce site featuring brand management and dynamic filtering. Built for high-performance browsing and a secure checkout flow.',
+  //   image: '/images/projects/urbanhut.png',
+  //   link: 'https://ecommerce1.zipsoftbd.com',
+  //   github: 'https://github.com/Rafiul29/urbanhut.git',
+  //   techStack: [
+  //     techStacks.laravel,
+  //     techStacks.mysql,
+  //     techStacks.javascript,
+  //     techStacks.bootstrap,
+  //     techStacks.jquery
+  //   ],
+  // },
   {
     title: 'Shopswing',
     description: 'An intuitive e-commerce solution enabling customers to browse products and manage carts seamlessly. Focused on speed and a frictionless user journey.',
