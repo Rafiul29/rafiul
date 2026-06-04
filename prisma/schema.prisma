@@ -27,6 +27,19 @@ model User {
   sessions      Session[]
   accounts      Account[]
 
+  // Portfolio Relations
+  profile       Profile?
+  projects      Project[]
+  blogs         Blog[]
+  skills        Skill[]
+  experiences   Experience[]
+  educations    Education[]
+  achievements  Achievement[]
+  certifications Certification[]
+  resumes       ResumeCV[]
+  coverLetters  CoverLetter[]
+  emailTemplates EmailTemplate[]
+
   @@unique([email])
   @@map("user")
 }
@@ -79,45 +92,343 @@ model Verification {
 // ------------------------------------
 // PORTFOLIO MODELS
 // ------------------------------------
+// ------------------------------------
+// AUTH MODELS (Keep as is, they look solid for Better-Auth/Next-Auth)
+// ------------------------------------
+
+// ------------------------------------
+// PORTFOLIO MODELS (Optimized)
+// ------------------------------------
+
 model Project {
-  id          String   @id @default(uuid())
-  title       String
-  description String
-  imageUrl    String
-  techStack   String[]
-  liveUrl     String?
-  githubUrl   String?
-  isFeatured  Boolean  @default(false)
+  id           String        @id @default(uuid())
+  userId       String
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
   
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  title        String
+
+  slug         String?       @unique
+  description  String?       @db.Text // Increased for better SEO/RAG context
+  content      String?       @db.Text
+  projectType  ProjectType   @default(PERSONAL)
   
+  // Media
+  images       String[]      @default([])
+  demoImage    String?       @map("demo_image")
+  videoUrl     String?       @map("video_url") // Added for project walkthroughs
+  
+  // Links
+  links        Json?  
+  
+  // Data
+  techStack    String[]      
+  isFeatured   Boolean       @default(false)
+  order        Int           @default(0)
+  
+  // Relationships
+  contributors ProjectContributor[]
+  
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@index([projectType])
+  @@index([isFeatured])
+  @@index([order])
   @@map("project")
 }
 
+model ProjectContributor {
+  id          String   @id @default(uuid())
+  name        String
+  role        String
+  projectId   String
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  avatar      String?
+  socialLinks Json?    // Optimized: Store all social URLs in one JSON field to reduce columns
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("project_contributor")
+}
+
 model Blog {
-  id        String   @id @default(uuid())
-  title     String
-  slug      String   @unique
-  content   String   @db.Text
-  imageUrl  String?
-  published Boolean  @default(false)
+  id          String      @id @default(uuid()) 
+  userId      String
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  title       String
+
+  slug        String      @unique
+  description String?     @db.Text
+  content     String?     @db.Text
+  imageUrl    String?
+  published   Boolean     @default(false)
+  tags        String[]
+  categories  String[]
+  readTime    Int?
+  viewCount   Int         @default(0)
+  isFeatured  Boolean     @default(false)
+  status      BlogStatus  @default(DRAFT) 
   
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
   
+  @@index([status])
+  @@index([published])
+  @@index([isFeatured])
   @@map("blog")
 }
 
+// ------------------------------------
+// NEW & UPDATED MODELS
+// ------------------------------------
+
 model Skill {
-  id        String   @id @default(uuid())
+  id        String         @id @default(uuid())
+  userId    String
+  user      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+
   name      String
-  category  String   // e.g "Frontend", "Backend"
+
+  category  SkillsCategory @default(FRONTEND)
+  level     SkillLevel     @default(INTERMEDIATE) // Added to show proficiency
   icon      String?
-  order     Int      @default(0) // Display order
+  order     Int            @default(0)
   
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  
+ @@index([category])
+  @@index([order])
+  @@map("skill")
+}
+
+model Experience { 
+  id          String    @id @default(uuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  company     String
+
+  position    String
+  location    String?
+  link        String?
+  startDate   DateTime
+  endDate     DateTime? // Null means "Present"
+  description String?   @db.Text
+  current     Boolean   @default(false)
+
+  order       Int            @default(0)
+
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  @@index([current])
+  @@index([startDate])
+  @@map("experience")
+}
+
+model Education { 
+  id          String    @id @default(uuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  institution String
+
+  degree      String
+  field       String?
+  location    String?
+  startDate   DateTime
+  endDate     DateTime? 
+  gpa         String?   
+  description String?   @db.Text
+  current     Boolean   @default(false)
+  
+  order       Int            @default(0)
+  
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  @@index([current])
+  @@index([startDate])
+  @@map("education")
+}
+
+model Achievement { 
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  title       String
+
+  description String?  @db.Text
+  imageUrl    String?
+  date        DateTime?
+  link        String?
+  order       Int            @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  @@index([date])
+  @@map("achievement")
+}
+
+model Certification {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  name        String
+
+  issuer      String
+  date        DateTime?
+  credentialUrl String?  @map("credential_url")
+  description String?  @db.Text
+  current     Boolean  @default(true)
+  order       Int            @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  @@map("certification")
+}
+
+
+
+model ResumeCV {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  title       String   
+  fileUrl     String   
+  isPrimary   Boolean  @default(false)
+  type        ResumeType @default(RESUME)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("resume_cv")
+}
+
+model CoverLetter {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  title       String   
+  content     String?  @db.Text 
+  fileUrl     String?  
+  isDefault   Boolean  @default(false)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("cover_letter")
+}
+
+model EmailTemplate {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  title       String   
+  subject     String?
+  body        String   @db.Text
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("email_template")
+}
+
+
+
+
+model Contact{
+  id          String   @id @default(uuid())
+  name        String
+  email       String
+  subject     String
+  message     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  @@map("contact")
+}
+
+model Profile {
+  id            String   @id @default(uuid())
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  fullName      String?
+  tagline       String?
+  bio           String?  @db.Text
+  avatarUrl     String?
+  location      String?
+  phoneNumber   String?
+  
+  availability  Boolean  @default(true)
+  socials       SocialLink[]
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("profile")
+}
+
+model SocialLink {
+  id        String   @id @default(uuid())
+  profileId String
+  profile   Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  platform  String   // e.g., "GitHub", "LinkedIn"
+  url       String
+  icon      String?
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  
-  @@map("skill")
+
+  @@map("social_link")
+}
+
+
+
+// ------------------------------------
+// ENUMS
+// ------------------------------------
+
+enum SkillLevel {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+  EXPERT
+}
+
+enum BlogStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ProjectType {
+  PERSONAL
+  UNIVERSITY
+  BUSINESS
+  OPEN_SOURCE
+  FREELANCE
+  OTHER
+}
+
+enum SkillsCategory {
+  FRONTEND
+  BACKEND
+  DATABASE
+  DEVOPS
+  TOOLS
+  LANGUAGE
+  OTHER
+}
+
+enum ResumeType {
+  RESUME
+  CV
 }

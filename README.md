@@ -59,5 +59,5 @@ Focused on high-performance applications, clean code, and seamless cross-device 
 [![GitHub Streak](https://streak-stats.demolab.com?user=Rafiul29)](https://git.io/streak-stats)
 
 
-
+npx prisma db seed
 

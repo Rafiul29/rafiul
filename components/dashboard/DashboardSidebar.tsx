@@ -6,7 +6,6 @@ import {
     LayoutDashboard,
     Briefcase,
     GraduationCap,
-    FileText,
     Settings,
     X,
     User,
@@ -14,8 +13,13 @@ import {
     Code2,
     ChevronLeft,
     ChevronRight,
-    LogOut
+    LogOut,
+    FileUser,
+    FileText,
+    Mail
 } from "lucide-react";
+
+
 import { motion, AnimatePresence } from "framer-motion";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
@@ -27,8 +31,12 @@ const sidebarLinks = [
     { href: "/dashboard/education", label: "Education", icon: GraduationCap },
     { href: "/dashboard/blogs", label: "Blogs", icon: FileText },
     { href: "/dashboard/skills", label: "Skills", icon: Code2 },
+    { href: "/dashboard/resumes", label: "Resumes/CVs", icon: FileUser },
+    { href: "/dashboard/cover-letters", label: "Cover Letters", icon: FileText },
+    { href: "/dashboard/email-templates", label: "Email Templates", icon: Mail },
     { href: "/dashboard/profile", label: "Profile", icon: User },
     { href: "/dashboard/settings", label: "Settings", icon: Settings },
+
 ];
 
 interface DashboardSidebarProps {
